@@ -1,0 +1,6 @@
+ID;orderId;name;description;quantity;pricerPerQuantity;totalPrice;currency;orderDate;shippingAddress_street;shippingAddress_city;shippingAddress_postalCode;shippingAddress_country;empId
+550e8400-e29b-41d4-a716-446655440001;ORD1001;Laptop;Business Laptop;2;75000;150000;INR;2026-09-01;MG Road;Pune;411001;India;sdfsdfdfs
+550e8400-e29b-41d4-a716-446655440002;ORD1002;Monitor;24 inch LED Monitor;3;15000;45000;INR;2026-09-03;Hinjewadi Road;Pune;411057;India;sdfsdfdfs
+550e8400-e29b-41d4-a716-446655440003;ORD1003;Keyboard;Wireless Keyboard;5;2500;12500;INR;2026-09-05;FC Road;Pune;411004;India;wewqeqw2
+550e8400-e29b-41d4-a716-446655440004;ORD1004;Mouse;Wireless Mouse;4;1200;4800;INR;2026-09-08;Baner Road;Pune;411045;India;sdfdfsdf
+550e8400-e29b-41d4-a716-446655440005;ORD1005;Headset;Bluetooth Headset;2;3500;7000;INR;2026-09-10;Viman Nagar;Pune;411014;India;sdfsdfdfs

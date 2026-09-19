@@ -53,7 +53,9 @@ entity Employees : cuid, managed {
         proejctName  : String(30);
         joiningDate  : Date;
         // empAddress : Composition of one AddressType
-        empAddress   : AddressType
+        empAddress   : AddressType;
+        empOrders    : Association to many EmployeeOrders
+                           on ID = empOrders.empId; // Unmanaged Assocaiation - one to many - one employee can have muliple order
 
 }
 
@@ -63,8 +65,12 @@ entity EmployeeOrders : cuid, managed {
     description       : String(30);
     quantity          : Integer;
     pricerPerQuantity : Decimal(10, 2);
-    totalPrice        : Decimal(10, 2); 
+    totalPrice        : Decimal(10, 2);
     currency          : String(3);
     orderDate         : Date;
-    shippingAddress   : AddressType
+    shippingAddress   : AddressType;
+    empId             : UUID;
+    employeeParent    : Association to one Employees
+                            on empId = employeeParent.ID; // Unmanaged Assocaiation - one to one - one order should have one employee
+
 }

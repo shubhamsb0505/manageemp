@@ -95,3 +95,31 @@ Aspects ->
 1. Reusable component can be used with multiple entities
 2. Support annotation like @UI, @mandatory
 3. can be used with composotionof
+
+
+## Association 
+1. Association is a relationship between two entities where bothe can exist independently of each other
+2. Loos coupling
+3. Each side of the relationship can exist without the other
+
+Example -: Customer and Order
+1. An order is linked to a customer
+2. But if you delete the order the customer still exists 
+3. Customer can exist even without an order 
+
+
+## Composition
+
+1. Composition is a stronger form of assocaition where one entity cannot exist without the other.
+2. Tight coupling
+3. The parent is deleted all its composed children are also deleted
+
+Example - Sales order and Item
+
+
+
+
+## Unmanage association
+
+1. Manually define the condition to join
+2. Give more 
