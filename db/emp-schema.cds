@@ -31,6 +31,7 @@ using {
 //     country    : String(100);
 // }
 
+
 type AddressType {
     street     : String(100);
     city       : String(100);
@@ -40,7 +41,7 @@ type AddressType {
 
 entity Employees : cuid, managed {
 
-    key employId     : Integer;
+        employId     : Integer;
         firstName    : String(15);
         lastName     : String(15);
         fullName     : String(30);
@@ -54,13 +55,14 @@ entity Employees : cuid, managed {
         joiningDate  : Date;
         // empAddress : Composition of one AddressType
         empAddress   : AddressType;
-        empOrders    : Association to many EmployeeOrders
-                           on ID = empOrders.empId; // Unmanaged Assocaiation - one to many - one employee can have muliple order
+        // empOrders    : Association to many EmployeeOrders
+        //                    on ID = empOrders.empId; // Unmanaged Assocaiation - one to many - one employee can have muliple order
+        empOrders : Association to many EmployeeOrders on empOrders.employeeParent = $self;
 
 }
 
 entity EmployeeOrders : cuid, managed {
-    orderId           : Integer;
+    orderId           : Integer; 
     name              : String(100);
     description       : String(30);
     quantity          : Integer;
@@ -69,8 +71,8 @@ entity EmployeeOrders : cuid, managed {
     currency          : String(3);
     orderDate         : Date;
     shippingAddress   : AddressType;
-    empId             : UUID;
-    employeeParent    : Association to one Employees
-                            on empId = employeeParent.ID; // Unmanaged Assocaiation - one to one - one order should have one employee
+    // employeeParent    : Association to one Employees
+    //                         on empId = employeeParent.ID; // Unmanaged Assocaiation - one to one - one order should have one employee
 
+     employeeParent    : Association to one Employees; // Managed Association
 }

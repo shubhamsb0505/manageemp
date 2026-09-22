@@ -123,3 +123,12 @@ Example - Sales order and Item
 
 1. Manually define the condition to join
 2. Give more 
+
+
+## Managed Association
+
+1. CAP/CDS handles the foreing key logic automatically
+2. We don't need to define/maintain manually foreign keys
+3. Cleaner and easier to use
+
+        

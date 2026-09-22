@@ -55,7 +55,7 @@ Content-Type: application/json
 
 
 ### It will update requested fileds and rest of the things will be as it is
-PATCH http://localhost:4004/manageemployee/Employees(106) HTTP/1.1
+PATCH http://localhost:4004/manageemployee/Employees(10) HTTP/1.1
 Content-Type: application/json
 
     {
@@ -68,4 +68,30 @@ Content-Type: application/json
 ### to Access underlying object
 
 GET http://localhost:4004/manageemployee/Employees(ID=35201fab-428c-4b49-ac94-0997a0aa297f,employId=106)?$expand=empAddress
+
+
+
+### POST call
+POST http://localhost:4004/manageemployee/Employees
+Content-Type: application/json
+
+{
+      "employId": 106,
+      "firstName": "Rahul",
+      "lastName": "Sharma",
+      "fullName": "Rahul Sharma",
+      "email": "rahul.sharma@gmail.com",
+      "phone": "3242344444",
+      "designation": "Team Lead",
+      "salary": "9534000.00",
+      "managerName": "Vijay Darda",
+      "baseLocation": "Pune",
+      "proejctName": "BP",
+      "joiningDate": "2026-04-25",
+        "empAddress_street" : "Yashone Street",
+        "empAddress_city": "Pune",
+        "empAddress_postalCode" : "234423",
+        "empAddress_country" : "India"
+    
+    }
 
